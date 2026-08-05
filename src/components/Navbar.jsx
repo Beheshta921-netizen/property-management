@@ -18,13 +18,74 @@ function Navbar() {
 
   const [mobileMenu, setMobileMenu] = useState(false);
 
+  // Close mobile menu
+  const closeMobileMenu = () => {
+    setMobileMenu(false);
+
+    setShowCompany(false);
+    setShowPlatform(false);
+    setShowResources(false);
+    setShowSupport(false);
+    setShowPricing(false);
+  };
+
+  // Close all dropdowns before opening another one
+  const toggleMobileDropdown = (menu) => {
+
+    if (menu === "company") {
+      setShowCompany(!showCompany);
+      setShowPlatform(false);
+      setShowResources(false);
+      setShowSupport(false);
+      setShowPricing(false);
+    }
+
+    if (menu === "platform") {
+      setShowPlatform(!showPlatform);
+      setShowCompany(false);
+      setShowResources(false);
+      setShowSupport(false);
+      setShowPricing(false);
+    }
+
+    if (menu === "resources") {
+      setShowResources(!showResources);
+      setShowCompany(false);
+      setShowPlatform(false);
+      setShowSupport(false);
+      setShowPricing(false);
+    }
+
+    if (menu === "support") {
+      setShowSupport(!showSupport);
+      setShowCompany(false);
+      setShowPlatform(false);
+      setShowResources(false);
+      setShowPricing(false);
+    }
+
+    if (menu === "pricing") {
+      setShowPricing(!showPricing);
+      setShowCompany(false);
+      setShowPlatform(false);
+      setShowResources(false);
+      setShowSupport(false);
+    }
+  };
+
   return (
 
     <header className="navbar">
 
-      {/* LOGO */}
+      {/* =========================
+          LOGO
+      ========================= */}
 
-      <Link to="/" className="logo">
+      <Link
+        to="/"
+        className="logo"
+        onClick={closeMobileMenu}
+      >
         🏢 <span>PropertyPro</span>
       </Link>
 
@@ -43,7 +104,7 @@ function Navbar() {
           onMouseLeave={() => setShowCompany(false)}
         >
 
-          <a href="#">
+          <a href="#!">
             Company
             <span className="arrow">▼</span>
           </a>
@@ -65,7 +126,7 @@ function Navbar() {
           onMouseLeave={() => setShowPlatform(false)}
         >
 
-          <a href="#">
+          <a href="#!">
             Platform
             <span className="arrow">▼</span>
           </a>
@@ -87,7 +148,7 @@ function Navbar() {
           onMouseLeave={() => setShowResources(false)}
         >
 
-          <a href="#">
+          <a href="#!">
             Resources
             <span className="arrow">▼</span>
           </a>
@@ -109,7 +170,7 @@ function Navbar() {
           onMouseLeave={() => setShowSupport(false)}
         >
 
-          <a href="#">
+          <a href="#!">
             Plans & Support
             <span className="arrow">▼</span>
           </a>
@@ -122,32 +183,33 @@ function Navbar() {
 
         </div>
 
+{/* PRICING */}
 
-        {/* PRICING */}
+<div
+  className="platform-menu"
+  onMouseEnter={() => setShowPricing(true)}
+  onMouseLeave={() => setShowPricing(false)}
+>
 
-        <div
-          className="platform-menu pricing-wrapper"
-          onMouseEnter={() => setShowPricing(true)}
-          onMouseLeave={() => setShowPricing(false)}
-        >
+  <a href="#!">
+    Pricing
+    <span className="arrow">▼</span>
+  </a>
 
-          <a href="#">
-            Pricing
-            <span className="arrow">▼</span>
-          </a>
+  {showPricing && (
+    <div className="dropdown-panel">
+      <PricingMenu />
+    </div>
+  )}
 
-          {showPricing && (
-            <div className="dropdown-panel pricing-panel">
-              <PricingMenu />
-            </div>
-          )}
-
-        </div>
+</div>
 
       </nav>
 
 
-      {/* DESKTOP GET STARTED */}
+      {/* =========================
+          DESKTOP GET STARTED
+      ========================= */}
 
       <Link
         to="/signup"
@@ -157,12 +219,25 @@ function Navbar() {
       </Link>
 
 
-      {/* MOBILE MENU BUTTON */}
+      {/* =========================
+          MOBILE MENU BUTTON
+      ========================= */}
 
       <button
         className="mobile-menu-button"
-        onClick={() => setMobileMenu(!mobileMenu)}
+        onClick={() => {
+          setMobileMenu(!mobileMenu);
+
+          if (mobileMenu) {
+            setShowCompany(false);
+            setShowPlatform(false);
+            setShowResources(false);
+            setShowSupport(false);
+            setShowPricing(false);
+          }
+        }}
         aria-label="Open navigation menu"
+        aria-expanded={mobileMenu}
       >
         {mobileMenu ? "✕" : "☰"}
       </button>
@@ -176,13 +251,18 @@ function Navbar() {
 
         <div className="mobile-navigation">
 
-          <div
+          {/* COMPANY */}
+
+          <button
             className="mobile-nav-item"
-            onClick={() => setShowCompany(!showCompany)}
+            onClick={() => toggleMobileDropdown("company")}
           >
             <span>Company</span>
-            <span>⌄</span>
-          </div>
+
+            <span className={showCompany ? "rotate-arrow" : ""}>
+             ⌄
+            </span>
+          </button>
 
           {showCompany && (
             <div className="mobile-dropdown">
@@ -190,29 +270,38 @@ function Navbar() {
             </div>
           )}
 
+        {/* PLATFORM */}
 
-          <div
+<div
+  className="platform-menu"
+  onMouseEnter={() => setShowPlatform(true)}
+  onMouseLeave={() => setShowPlatform(false)}
+>
+  <a href="#!">
+    Platform
+    <span className="arrow">▼</span>
+  </a>
+
+  {showPlatform && (
+    <div className="dropdown-panel">
+      <MegaMenu />
+    </div>
+  )}
+</div>
+
+
+          {/* RESOURCES */}
+
+          <button
             className="mobile-nav-item"
-            onClick={() => setShowPlatform(!showPlatform)}
-          >
-            <span>Platform</span>
-            <span>⌄</span>
-          </div>
-
-          {showPlatform && (
-            <div className="mobile-dropdown">
-              <MegaMenu />
-            </div>
-          )}
-
-
-          <div
-            className="mobile-nav-item"
-            onClick={() => setShowResources(!showResources)}
+            onClick={() => toggleMobileDropdown("resources")}
           >
             <span>Resources</span>
-            <span>⌄</span>
-          </div>
+
+            <span className={showResources ? "rotate-arrow" : ""}>
+              ⌄
+            </span>
+          </button>
 
           {showResources && (
             <div className="mobile-dropdown">
@@ -221,13 +310,18 @@ function Navbar() {
           )}
 
 
-          <div
+          {/* PLANS & SUPPORT */}
+
+          <button
             className="mobile-nav-item"
-            onClick={() => setShowSupport(!showSupport)}
+            onClick={() => toggleMobileDropdown("support")}
           >
             <span>Plans & Support</span>
-            <span>⌄</span>
-          </div>
+
+            <span className={showSupport ? "rotate-arrow" : ""}>
+              ⌄
+            </span>
+          </button>
 
           {showSupport && (
             <div className="mobile-dropdown">
@@ -236,25 +330,32 @@ function Navbar() {
           )}
 
 
-          <div
-            className="mobile-nav-item"
-            onClick={() => setShowPricing(!showPricing)}
-          >
-            <span>Pricing</span>
-            <span>⌄</span>
-          </div>
 
-          {showPricing && (
-            <div className="mobile-dropdown">
-              <PricingMenu />
-            </div>
-          )}
+{/* PRICING */}
 
+<div
+  className="platform-menu"
+  onMouseEnter={() => setShowPricing(true)}
+  onMouseLeave={() => setShowPricing(false)}
+>
+  <a href="#!">
+    Pricing
+    <span className="arrow">▼</span>
+  </a>
+
+  {showPricing && (
+    <div className="dropdown-panel">
+      <PricingMenu />
+    </div>
+  )}
+</div>
+
+          {/* GET STARTED */}
 
           <Link
             to="/signup"
             className="mobile-get-started"
-            onClick={() => setMobileMenu(false)}
+            onClick={closeMobileMenu}
           >
             Get Started
           </Link>
@@ -264,7 +365,6 @@ function Navbar() {
       )}
 
     </header>
-
   );
 }
 

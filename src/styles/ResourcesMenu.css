@@ -1,138 +1,410 @@
+/* =========================================
+   RESOURCES MENU
+========================================= */
+
 .resources-menu {
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
     width: 900px;
-    background: #fff;
-    border-radius: 18px;
-    padding: 30px;
+    max-width: calc(100vw - 40px);
+
+    background: #ffffff;
+
+    border: 1px solid #e8edf5;
+
+    border-radius: 22px;
+
+    padding: 26px;
+
     display: grid;
-    grid-template-columns: 1fr 1fr 280px;
-    gap: 30px;
-    box-shadow: 0 15px 45px rgba(0,0,0,.12);
-    align-items: start;
+
+    grid-template-columns: 1fr 1fr 1.05fr;
+
+    gap: 20px;
+
+    box-shadow:
+        0 25px 60px rgba(15, 23, 42, 0.14),
+        0 5px 20px rgba(15, 23, 42, 0.06);
+
+    align-items: stretch;
+
+    z-index: 9999;
+
+    animation: resourcesShow 0.22s ease forwards;
 }
 
-/* Columns */
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes resourcesShow {
+
+    from {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+}
+
+
+/* =========================================
+   COLUMNS
+========================================= */
 
 .resources-column {
+
     display: flex;
+
     flex-direction: column;
-    gap: 10px;
+
+    gap: 6px;
+
 }
+
+
+/* =========================================
+   RESOURCE LINK
+========================================= */
 
 .resource-link {
+
+    display: block;
+
     text-decoration: none;
+
     color: inherit;
+
+    border-radius: 15px;
+
 }
 
-/* Resource Card */
+
+/* =========================================
+   RESOURCE CARD
+========================================= */
 
 .resource-card {
+
     display: flex;
+
     align-items: flex-start;
-    gap: 15px;
-    padding: 16px;
-    border-radius: 14px;
-    transition: all .25s ease;
+
+    gap: 13px;
+
+    padding: 13px;
+
+    border-radius: 15px;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+
 }
+
 
 .resource-card:hover {
-    background: #f5f9ff;
-    transform: translateX(6px);
+
+    background: #f4f7ff;
+
+    transform: translateX(4px);
+
 }
+
+
+/* =========================================
+   ICON
+========================================= */
 
 .resource-icon {
-    width: 52px;
-    height: 52px;
-    min-width: 52px;
-    background: #edf4ff;
-    color: #2563eb;
-    border-radius: 14px;
+
+    width: 42px;
+
+    height: 42px;
+
+    min-width: 42px;
+
     display: flex;
-    justify-content: center;
+
     align-items: center;
-    font-size: 22px;
+
+    justify-content: center;
+
+    background: #eef4ff;
+
+    color: #4b78d9;
+
+    border-radius: 11px;
+
+    font-size: 18px;
+
+    transition: 0.25s ease;
+
 }
+
+
+.resource-card:hover .resource-icon {
+
+    background: #4b78d9;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
 
 .resource-card h4 {
-    margin: 0;
-    font-size: 18px;
-    color: #111827;
+
+    margin: 1px 0 5px;
+
+    font-size: 15px;
+
+    font-weight: 650;
+
+    line-height: 1.3;
+
+    color: #172033;
+
 }
+
 
 .resource-card p {
-    margin-top: 6px;
-    color: #6b7280;
-    font-size: 14px;
-    line-height: 1.5;
+
+    margin: 0;
+
+    color: #7a8496;
+
+    font-size: 12.5px;
+
+    line-height: 1.55;
+
 }
 
-/* Preview */
+
+/* =========================================
+   RIGHT PREVIEW
+========================================= */
 
 .resources-preview {
-    background: linear-gradient(180deg,#f8fbff,#eef5ff);
+
+    background: #f7f9fc;
+
+    border: 1px solid #edf0f5;
+
     border-radius: 18px;
-    padding: 24px;
+
+    padding: 18px;
+
     display: flex;
+
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+    align-items: flex-start;
+
 }
+
+
+/* =========================================
+   RESOURCE PLACEHOLDER
+========================================= */
 
 .resource-placeholder {
+
     width: 100%;
-    height: 130px;
+
+    height: 135px;
+
     border-radius: 14px;
-    background: #dbeafe;
+
+    background: #eef4ff;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
-    font-size: 55px;
-    color: #2563eb;
-    margin-bottom: 18px;
+
+    font-size: 52px;
+
+    color: #4b78d9;
+
 }
+
+
+/* =========================================
+   PREVIEW TITLE
+========================================= */
 
 .resources-preview h3 {
-    margin: 0;
-    font-size: 22px;
-    color: #111827;
+
+    margin: 14px 0 7px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: #172033;
+
 }
+
+
+/* =========================================
+   PREVIEW DESCRIPTION
+========================================= */
 
 .resources-preview p {
-    margin-top: 12px;
-    font-size: 14px;
-    color: #6b7280;
+
+    margin: 0;
+
+    color: #727d91;
+
+    font-size: 13px;
+
     line-height: 1.6;
-    text-align: center;
+
+    text-align: left;
+
 }
+
+
+/* =========================================
+   BUTTON
+========================================= */
 
 .resources-btn {
-    margin-top: 22px;
-    background: #2563eb;
-    color: #fff;
+
+    margin-top: 15px;
+
+    padding: 10px 17px;
+
     border: none;
-    padding: 13px 24px;
-    border-radius: 30px;
+
+    background: #4b78d9;
+
+    color: #ffffff;
+
+    border-radius: 25px;
+
     cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 13px;
+
     font-weight: 600;
-    transition: .25s;
+
+    transition: 0.25s ease;
+
 }
+
 
 .resources-btn:hover {
-    background: #1d4ed8;
+
+    background: #3f69c5;
+
     transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(75, 120, 217, 0.2);
+
 }
 
-/* Responsive */
+
+/* =========================================
+   TABLET
+========================================= */
 
 @media (max-width: 1000px) {
 
     .resources-menu {
-        width: 95%;
-        grid-template-columns: 1fr;
-        gap: 20px;
+
+        width: 700px;
+
+        grid-template-columns: 1fr 1fr;
+
     }
 
     .resources-preview {
-        margin-top: 10px;
+
+        display: none;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .resources-menu {
+
+        position: fixed;
+
+        top: 95px;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: calc(100vw - 25px);
+
+        max-width: 500px;
+
+        max-height: 75vh;
+
+        overflow-y: auto;
+
+        grid-template-columns: 1fr;
+
+        padding: 18px;
+
+        gap: 8px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .resource-card {
+
+        padding: 12px;
+
+    }
+
+
+    .resources-preview {
+
+        display: block;
+
+    }
+
+
+    .resource-placeholder {
+
+        height: 120px;
+
     }
 
 }

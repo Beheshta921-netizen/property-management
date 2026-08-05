@@ -1,0 +1,327 @@
+/* =========================================
+   PRICING MENU
+========================================= */
+
+.pricing-menu {
+    width: 620px;
+    max-width: calc(100vw - 30px);
+
+    background: #ffffff;
+
+    border: 1px solid #e8edf5;
+
+    border-radius: 20px;
+
+    padding: 24px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    box-shadow:
+        0 25px 60px rgba(15, 23, 42, 0.14),
+        0 5px 20px rgba(15, 23, 42, 0.06);
+
+    animation: pricingShow 0.22s ease forwards;
+
+    z-index: 9999;
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes pricingShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   COLUMN
+========================================= */
+
+.pricing-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+/* =========================================
+   LINK
+========================================= */
+
+.pricing-link {
+
+    text-decoration: none;
+
+    color: inherit;
+
+    display: block;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.pricing-card {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.pricing-card:hover {
+
+    background: #f4f7ff;
+
+    transform: translateX(4px);
+
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.pricing-icon {
+
+    width: 44px;
+
+    height: 44px;
+
+    min-width: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eef4ff;
+
+    color: #4b78d9;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.pricing-card:hover .pricing-icon {
+
+    background: #4b78d9;
+
+    color: white;
+
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.pricing-card h4 {
+
+    margin: 2px 0 5px;
+
+    color: #172033;
+
+    font-size: 16px;
+
+    font-weight: 650;
+
+}
+
+
+.pricing-card p {
+
+    margin: 0;
+
+    color: #7a8496;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   RIGHT INFO BOX
+========================================= */
+
+.pricing-info {
+
+    background: #f7f9fc;
+
+    border: 1px solid #edf0f5;
+
+    border-radius: 17px;
+
+    padding: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.pricing-info-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eef4ff;
+
+    color: #4b78d9;
+
+    border-radius: 13px;
+
+    font-size: 21px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.pricing-info h3 {
+
+    margin: 0 0 8px;
+
+    font-size: 19px;
+
+    color: #172033;
+
+}
+
+
+.pricing-info p {
+
+    margin: 0;
+
+    color: #727d91;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.pricing-btn {
+
+    margin-top: 18px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #4b78d9;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.25s ease;
+
+}
+
+
+.pricing-btn:hover {
+
+    background: #3f69c5;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(75, 120, 217, 0.2);
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .pricing-menu {
+
+        width: calc(100vw - 25px);
+
+        grid-template-columns: 1fr;
+
+        padding: 18px;
+
+    }
+
+    .pricing-info {
+
+        display: none;
+
+    }
+
+}
