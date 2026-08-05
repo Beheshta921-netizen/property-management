@@ -1,0 +1,338 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================
+   TABLET + MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Prevent horizontal overflow */
+
+    .navbar,
+    .hero,
+    section,
+    .pricing-section,
+    .faq,
+    .chat-page,
+    .offices-page {
+        max-width: 100%;
+    }
+
+
+    /* =====================================
+       NAVBAR
+    ===================================== */
+
+    .navbar {
+        width: calc(100% - 24px);
+        height: 64px;
+
+        top: 12px;
+
+        padding: 0 16px;
+
+        border-radius: 35px;
+    }
+
+    .logo span {
+        font-size: 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-btn {
+        padding: 10px 17px;
+        font-size: 13px;
+    }
+
+
+    /* =====================================
+       GENERAL HEADINGS
+    ===================================== */
+
+    h1 {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+
+    /* =====================================
+       HERO
+    ===================================== */
+
+    .hero {
+        width: 100%;
+        padding: 100px 15px 50px;
+    }
+
+    .hero-container {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-house {
+        width: 100%;
+        max-width: 500px;
+
+        transform: none;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+        padding: 10px 5px;
+
+        transform: none;
+
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(36px, 10vw, 48px);
+    }
+
+    .hero-content p {
+        width: 100%;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    /* =====================================
+       PRICING
+    ===================================== */
+
+    .pricing-section {
+        width: 100%;
+        padding: 0 15px;
+        margin: 70px auto;
+    }
+
+    .pricing-header h2 {
+        font-size: 38px;
+    }
+
+    .pricing-cards {
+        grid-template-columns: 1fr !important;
+    }
+
+    .pricing-card {
+        width: 100%;
+    }
+
+    .featured {
+        transform: none;
+    }
+
+
+    /* =====================================
+       FAQ
+    ===================================== */
+
+    .faq {
+        width: 100%;
+        padding: 0 15px;
+
+        margin: 70px auto;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .faq-right {
+        width: 100%;
+    }
+
+    .faq-item {
+        width: 100%;
+    }
+
+    .faq-question {
+        padding: 18px;
+    }
+
+    .faq-question h3 {
+        font-size: 16px;
+    }
+
+
+    /* =====================================
+       DASHBOARD
+    ===================================== */
+
+    .dashboard-section {
+        width: 100%;
+        padding: 60px 15px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboard-text,
+    .dashboard-preview {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .preview-window {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* =====================================
+       COMMON GRIDS
+    ===================================== */
+
+    .grid,
+    .blog-grid,
+    .features-grid,
+    .agent-grid,
+    .benefits-grid,
+    .options-grid,
+    .offices-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    /* =====================================
+       BLOG IMAGES
+    ===================================== */
+
+    .blog-card img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* =====================================
+       LIVE CHAT
+    ===================================== */
+
+    .chat-page {
+        width: 100%;
+        margin-top: 80px;
+    }
+
+    .chat-hero {
+        width: 100%;
+
+        padding: 50px 15px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-left h1 {
+        font-size: 40px;
+    }
+
+    .chat-preview {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .chat-stats {
+        grid-template-columns: 1fr !important;
+        padding: 0 15px;
+    }
+
+    .chat-cta {
+        width: calc(100% - 30px);
+        margin: 70px auto;
+
+        padding: 45px 20px;
+    }
+
+
+    /* =====================================
+       GLOBAL OFFICES
+    ===================================== */
+
+    .offices-hero {
+        padding: 70px 20px;
+        text-align: center;
+    }
+
+    .offices-hero h1 {
+        font-size: 42px;
+    }
+
+    .offices-section {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+
+    /* =====================================
+       BUTTONS
+    ===================================== */
+
+    button {
+        max-width: 100%;
+    }
+
+}

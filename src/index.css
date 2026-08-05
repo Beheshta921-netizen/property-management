@@ -41,3 +41,369 @@ button:hover{
 html{
     scroll-behavior:smooth;
 }
+/* =====================================================
+   GLOBAL RESPONSIVE FIX
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =====================================================
+   MOBILE NAVBAR
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        width: calc(100% - 24px);
+        height: 64px;
+
+        top: 12px;
+
+        padding: 0 16px;
+
+        border-radius: 35px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo span {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-btn {
+        padding: 10px 17px;
+        font-size: 13px;
+    }
+
+
+    /* =================================================
+       GENERAL SECTIONS
+    ================================================= */
+
+    section {
+        max-width: 100%;
+    }
+
+    .hero,
+    .pricing-section,
+    .faq,
+    .chat-page,
+    .offices-page {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* =================================================
+       HERO
+    ================================================= */
+
+    .hero {
+        padding-top: 95px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hero-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-house {
+        width: 100%;
+        max-width: 500px;
+        transform: none;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 10px 5px;
+        transform: none;
+
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(36px, 10vw, 48px);
+        line-height: 1.08;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-content p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    /* =================================================
+       PRICING
+    ================================================= */
+
+    .pricing-section {
+        margin: 70px auto;
+        padding: 0 15px;
+    }
+
+    .pricing-header h2 {
+        font-size: 38px;
+    }
+
+    .pricing-cards {
+        grid-template-columns: 1fr !important;
+        gap: 25px;
+    }
+
+    .pricing-card {
+        width: 100%;
+        padding: 28px 22px;
+    }
+
+    .featured {
+        transform: none;
+    }
+
+
+    /* =================================================
+       FAQ
+    ================================================= */
+
+    .faq {
+        width: 100%;
+        margin: 70px auto;
+        padding: 0 15px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .faq-left h2 {
+        font-size: 38px;
+    }
+
+    .faq-right {
+        width: 100%;
+    }
+
+    .faq-item {
+        width: 100%;
+    }
+
+    .faq-question {
+        padding: 18px;
+    }
+
+    .faq-question h3 {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+
+    /* =================================================
+       DASHBOARD
+    ================================================= */
+
+    .dashboard-section {
+        width: 100%;
+        padding: 60px 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboard-text {
+        width: 100%;
+    }
+
+    .dashboard-preview {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .preview-window {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* =================================================
+       BLOG / CARDS / GRIDS
+    ================================================= */
+
+    .grid,
+    .blog-grid,
+    .features-grid,
+    .agent-grid,
+    .benefits-grid,
+    .options-grid,
+    .offices-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    /* =================================================
+       IMAGES
+    ================================================= */
+
+    .blog-card img,
+    .feature-card img,
+    .office-card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+
+    /* =================================================
+       COMMON HEADINGS
+    ================================================= */
+
+    h1 {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+
+    /* =================================================
+       LIVE CHAT
+    ================================================= */
+
+    .chat-page {
+        margin-top: 80px;
+    }
+
+    .chat-hero {
+        width: 100%;
+        padding: 50px 15px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .hero-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-left h1 {
+        font-size: 40px;
+    }
+
+    .hero-left p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .chat-preview {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .chat-stats {
+        grid-template-columns: 1fr !important;
+        padding: 0 15px;
+    }
+
+    .chat-cta {
+        width: calc(100% - 30px);
+        margin: 70px auto;
+        padding: 45px 20px;
+    }
+
+    .chat-cta h2 {
+        font-size: 32px;
+    }
+
+
+    /* =================================================
+       GLOBAL OFFICES
+    ================================================= */
+
+    .offices-hero {
+        padding: 70px 20px;
+        text-align: center;
+    }
+
+    .offices-hero h1 {
+        font-size: 42px;
+    }
+
+    .offices-section {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .map-box {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+
+    /* =================================================
+       BUTTONS
+    ================================================= */
+
+    button {
+        max-width: 100%;
+    }
+
+}
