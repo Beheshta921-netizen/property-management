@@ -8,7 +8,6 @@ import ResourcesMenu from "./ResourcesMenu";
 import SupportMenu from "./SupportMenu";
 import PricingMenu from "./PricingMenu";
 
-
 function Navbar() {
 
   const [showCompany, setShowCompany] = useState(false);
@@ -17,22 +16,26 @@ function Navbar() {
   const [showSupport, setShowSupport] = useState(false);
   const [showPricing, setShowPricing] = useState(false);
 
+  const [mobileMenu, setMobileMenu] = useState(false);
+
   return (
 
     <header className="navbar">
 
-      {/* Logo */}
+      {/* LOGO */}
 
-      <div className="logo">
+      <Link to="/" className="logo">
         🏢 <span>PropertyPro</span>
-      </div>
+      </Link>
 
 
-      {/* Navigation */}
+      {/* =========================
+          DESKTOP NAVIGATION
+      ========================= */}
 
       <nav className="nav-links">
 
-        {/* Company */}
+        {/* COMPANY */}
 
         <div
           className="platform-menu"
@@ -41,11 +44,12 @@ function Navbar() {
         >
 
           <a href="#">
-            Company <span className="arrow">▼</span>
+            Company
+            <span className="arrow">▼</span>
           </a>
 
           {showCompany && (
-            <div>
+            <div className="dropdown-panel">
               <CompanyMenu />
             </div>
           )}
@@ -53,7 +57,7 @@ function Navbar() {
         </div>
 
 
-        {/* Platform */}
+        {/* PLATFORM */}
 
         <div
           className="platform-menu"
@@ -62,17 +66,20 @@ function Navbar() {
         >
 
           <a href="#">
-            Platform <span className="arrow">▼</span>
+            Platform
+            <span className="arrow">▼</span>
           </a>
 
           {showPlatform && (
-            <MegaMenu />
+            <div className="dropdown-panel">
+              <MegaMenu />
+            </div>
           )}
 
         </div>
 
 
-        {/* Resources */}
+        {/* RESOURCES */}
 
         <div
           className="platform-menu"
@@ -81,7 +88,8 @@ function Navbar() {
         >
 
           <a href="#">
-            Resources <span className="arrow">▼</span>
+            Resources
+            <span className="arrow">▼</span>
           </a>
 
           {showResources && (
@@ -93,7 +101,7 @@ function Navbar() {
         </div>
 
 
-        {/* Plans & Support */}
+        {/* PLANS & SUPPORT */}
 
         <div
           className="platform-menu"
@@ -102,7 +110,8 @@ function Navbar() {
         >
 
           <a href="#">
-            Plans & Support <span className="arrow">▼</span>
+            Plans & Support
+            <span className="arrow">▼</span>
           </a>
 
           {showSupport && (
@@ -114,7 +123,7 @@ function Navbar() {
         </div>
 
 
-        {/* Pricing */}
+        {/* PRICING */}
 
         <div
           className="platform-menu pricing-wrapper"
@@ -123,15 +132,12 @@ function Navbar() {
         >
 
           <a href="#">
-            Pricing <span className="arrow">▼</span>
+            Pricing
+            <span className="arrow">▼</span>
           </a>
 
           {showPricing && (
-            <div
-              className="dropdown-panel pricing-panel"
-              onMouseEnter={() => setShowPricing(true)}
-              onMouseLeave={() => setShowPricing(false)}
-            >
+            <div className="dropdown-panel pricing-panel">
               <PricingMenu />
             </div>
           )}
@@ -141,25 +147,125 @@ function Navbar() {
       </nav>
 
 
-      {/* RIGHT BUTTONS */}
+      {/* DESKTOP GET STARTED */}
 
-      <div className="nav-actions">
+      <Link
+        to="/signup"
+        className="desktop-get-started"
+      >
+        Get Started
+      </Link>
 
-        {/* Get Started */}
 
-        <Link to="/signup">
-          <button className="nav-btn">
+      {/* MOBILE MENU BUTTON */}
+
+      <button
+        className="mobile-menu-button"
+        onClick={() => setMobileMenu(!mobileMenu)}
+        aria-label="Open navigation menu"
+      >
+        {mobileMenu ? "✕" : "☰"}
+      </button>
+
+
+      {/* =========================
+          MOBILE MENU
+      ========================= */}
+
+      {mobileMenu && (
+
+        <div className="mobile-navigation">
+
+          <div
+            className="mobile-nav-item"
+            onClick={() => setShowCompany(!showCompany)}
+          >
+            <span>Company</span>
+            <span>⌄</span>
+          </div>
+
+          {showCompany && (
+            <div className="mobile-dropdown">
+              <CompanyMenu />
+            </div>
+          )}
+
+
+          <div
+            className="mobile-nav-item"
+            onClick={() => setShowPlatform(!showPlatform)}
+          >
+            <span>Platform</span>
+            <span>⌄</span>
+          </div>
+
+          {showPlatform && (
+            <div className="mobile-dropdown">
+              <MegaMenu />
+            </div>
+          )}
+
+
+          <div
+            className="mobile-nav-item"
+            onClick={() => setShowResources(!showResources)}
+          >
+            <span>Resources</span>
+            <span>⌄</span>
+          </div>
+
+          {showResources && (
+            <div className="mobile-dropdown">
+              <ResourcesMenu />
+            </div>
+          )}
+
+
+          <div
+            className="mobile-nav-item"
+            onClick={() => setShowSupport(!showSupport)}
+          >
+            <span>Plans & Support</span>
+            <span>⌄</span>
+          </div>
+
+          {showSupport && (
+            <div className="mobile-dropdown">
+              <SupportMenu />
+            </div>
+          )}
+
+
+          <div
+            className="mobile-nav-item"
+            onClick={() => setShowPricing(!showPricing)}
+          >
+            <span>Pricing</span>
+            <span>⌄</span>
+          </div>
+
+          {showPricing && (
+            <div className="mobile-dropdown">
+              <PricingMenu />
+            </div>
+          )}
+
+
+          <Link
+            to="/signup"
+            className="mobile-get-started"
+            onClick={() => setMobileMenu(false)}
+          >
             Get Started
-          </button>
-        </Link>
+          </Link>
 
-      </div>
+        </div>
+
+      )}
 
     </header>
 
   );
-
 }
-
 
 export default Navbar;

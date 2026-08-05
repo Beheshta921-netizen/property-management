@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Hero.css";
 
+// Import image from assets
+import houseImage from "../assets/house.png";
+
 const Hero = () => {
   return (
     <section className="hero">
@@ -15,7 +18,7 @@ const Hero = () => {
         <div className="hero-image-wrapper">
 
           <img
-            src="/src/assets/house.png"
+            src={houseImage}
             alt="Modern Property"
             className="hero-house"
           />
