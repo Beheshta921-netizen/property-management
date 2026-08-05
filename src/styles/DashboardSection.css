@@ -1,0 +1,538 @@
+/* =========================================
+   DASHBOARD SECTION
+========================================= */
+
+.dashboard-section {
+  width: 100%;
+  min-height: 700px;
+
+  padding: 120px 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 80px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.dashboard-text {
+  width: 42%;
+  max-width: 560px;
+}
+
+.section-tag {
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  border-radius: 30px;
+
+  background: #eef4ff;
+
+  color: #2563eb;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.dashboard-text h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: clamp(40px, 4vw, 58px);
+
+  line-height: 1.08;
+
+  letter-spacing: -2px;
+}
+
+.dashboard-text > p {
+  margin-top: 25px;
+
+  color: #667085;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  max-width: 520px;
+}
+
+
+/* =========================================
+   FEATURE LIST
+========================================= */
+
+.feature-list {
+  list-style: none;
+
+  padding: 0;
+
+  margin: 28px 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.feature-list li {
+  color: #344054;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.learn-btn {
+  border: none;
+
+  padding: 14px 24px;
+
+  border-radius: 30px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.learn-btn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(37, 99, 235, 0.22);
+}
+
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.dashboard-preview {
+  width: 58%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   DASHBOARD WINDOW
+========================================= */
+
+.preview-window {
+  width: 100%;
+
+  max-width: 680px;
+
+  min-height: 430px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e7ec;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 70px rgba(16, 24, 40, 0.13);
+
+  transform: perspective(1200px) rotateY(-3deg);
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+
+  animation: dashboardFloat 5s ease-in-out infinite;
+}
+
+.preview-window:hover {
+  transform:
+    perspective(1200px)
+    rotateY(0deg)
+    translateY(-8px);
+
+  box-shadow:
+    0 35px 80px rgba(16, 24, 40, 0.18);
+}
+
+
+/* =========================================
+   BROWSER HEADER
+========================================= */
+
+.preview-header {
+  height: 48px;
+
+  padding: 0 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  background: #f9fafb;
+
+  border-bottom: 1px solid #eaecf0;
+}
+
+.preview-header span {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #d0d5dd;
+}
+
+
+/* =========================================
+   DASHBOARD CONTENT
+========================================= */
+
+.preview-window::after {
+  content: "PropertyPro Dashboard";
+
+  position: absolute;
+
+  top: 63px;
+  left: 25px;
+
+  color: #101828;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   CHART AREA
+========================================= */
+
+.preview-chart {
+  position: relative;
+
+  height: 230px;
+
+  margin: 55px 25px 0;
+
+  padding: 25px;
+
+  border: 1px solid #eaecf0;
+
+  border-radius: 10px;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #ffffff 0px,
+      #ffffff 45px,
+      #f2f4f7 46px
+    );
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CHART BARS
+========================================= */
+
+.chart-bars {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-around;
+
+  gap: 25px;
+}
+
+.bar {
+  width: 38px;
+
+  border-radius: 6px 6px 0 0;
+
+  background: linear-gradient(
+    to top,
+    #2563eb,
+    #60a5fa
+  );
+
+  transform-origin: bottom;
+
+  animation: barGrow 1.2s ease-out both;
+}
+
+
+/* Different bar heights */
+
+.bar.h1 {
+  height: 35%;
+  animation-delay: 0.1s;
+}
+
+.bar.h2 {
+  height: 52%;
+  animation-delay: 0.2s;
+}
+
+.bar.h3 {
+  height: 43%;
+  animation-delay: 0.3s;
+}
+
+.bar.h4 {
+  height: 70%;
+  animation-delay: 0.4s;
+}
+
+.bar.h5 {
+  height: 61%;
+  animation-delay: 0.5s;
+}
+
+.bar.h6 {
+  height: 88%;
+  animation-delay: 0.6s;
+}
+
+
+/* =========================================
+   SMALL STAT CARDS
+========================================= */
+
+.preview-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin: 18px 25px 25px;
+}
+
+.mini-box {
+  padding: 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #eaecf0;
+
+  border-radius: 9px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.mini-box:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 10px 25px rgba(16, 24, 40, 0.08);
+}
+
+.mini-box h3 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 20px;
+}
+
+.mini-box p {
+  margin: 5px 0 0;
+
+  color: #98a2b3;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes barGrow {
+
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+}
+
+@keyframes dashboardFloat {
+
+  0% {
+    transform:
+      perspective(1200px)
+      rotateY(-3deg)
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      perspective(1200px)
+      rotateY(-3deg)
+      translateY(-8px);
+  }
+
+  100% {
+    transform:
+      perspective(1200px)
+      rotateY(-3deg)
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .dashboard-section {
+    flex-direction: column;
+
+    padding: 90px 6%;
+
+    gap: 60px;
+  }
+
+  .dashboard-text {
+    width: 100%;
+
+    max-width: 700px;
+
+    text-align: center;
+  }
+
+  .dashboard-text > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-list {
+    align-items: center;
+  }
+
+  .dashboard-preview {
+    width: 100%;
+  }
+
+  .preview-window {
+    max-width: 700px;
+
+    transform: none;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .dashboard-section {
+    padding: 70px 20px;
+  }
+
+  .dashboard-text h2 {
+    font-size: 38px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .dashboard-text > p {
+    font-size: 15px;
+  }
+
+  .preview-window {
+    min-height: 360px;
+
+    border-radius: 12px;
+
+    animation: none;
+  }
+
+  .preview-chart {
+    height: 180px;
+
+    margin-left: 15px;
+    margin-right: 15px;
+
+    padding: 15px;
+  }
+
+  .chart-bars {
+    gap: 10px;
+  }
+
+  .bar {
+    width: 25px;
+  }
+
+  .preview-cards {
+    margin-left: 15px;
+    margin-right: 15px;
+
+    gap: 8px;
+  }
+
+  .mini-box {
+    padding: 10px;
+  }
+
+  .mini-box h3 {
+    font-size: 16px;
+  }
+
+}

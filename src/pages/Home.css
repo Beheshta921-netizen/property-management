@@ -1,0 +1,96 @@
+/* =========================================
+   GLOBAL HOME PAGE
+========================================= */
+
+.home-page {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   SECTION LOAD ANIMATION
+========================================= */
+
+.home-section {
+  opacity: 0;
+
+  transform: translateY(60px);
+
+  animation: sectionReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+
+/* Sections appear one after another */
+
+.section-1 {
+  animation-delay: 0.15s;
+}
+
+.section-2 {
+  animation-delay: 0.25s;
+}
+
+.section-3 {
+  animation-delay: 0.35s;
+}
+
+.section-4 {
+  animation-delay: 0.45s;
+}
+
+.section-5 {
+  animation-delay: 0.55s;
+}
+
+.section-6 {
+  animation-delay: 0.65s;
+}
+
+.section-7 {
+  animation-delay: 0.75s;
+}
+
+.section-8 {
+  animation-delay: 0.85s;
+}
+
+
+@keyframes sectionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   SMOOTH PAGE
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* =========================================
+   REDUCE ANIMATION FOR ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}

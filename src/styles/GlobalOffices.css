@@ -1,0 +1,292 @@
+.offices-page {
+
+  font-family: Arial, sans-serif;
+
+  color:#1f2937;
+
+}
+
+
+
+/* ================= HERO ================= */
+
+
+.offices-hero {
+
+  background:
+
+  linear-gradient(
+    135deg,
+    #111827,
+    #2563eb
+  );
+
+  color:white;
+
+  text-align:center;
+
+  padding:100px 20px;
+
+}
+
+
+
+.offices-hero h1 {
+
+  font-size:55px;
+
+  margin-bottom:20px;
+
+}
+
+
+
+.offices-hero p {
+
+  max-width:750px;
+
+  margin:auto;
+
+  font-size:20px;
+
+  line-height:1.7;
+
+  color:#dbeafe;
+
+}
+
+
+
+
+
+/* ================= OFFICES SECTION ================= */
+
+
+.offices-section {
+
+  padding:80px;
+
+  background:#f8fafc;
+
+}
+
+
+
+.offices-section h2 {
+
+  text-align:center;
+
+  font-size:40px;
+
+  margin-bottom:50px;
+
+  color:#111827;
+
+}
+
+
+
+
+
+/* ================= OFFICE GRID ================= */
+
+
+.offices-grid {
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:30px;
+
+}
+
+
+
+
+
+/* ================= OFFICE CARD ================= */
+
+
+.office-card {
+
+  background:white;
+
+  padding:35px 25px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+
+  box-shadow:
+
+  0 10px 30px rgba(0,0,0,0.08);
+
+
+  transition:.35s;
+
+
+  border:1px solid #e5e7eb;
+
+}
+
+
+
+.office-card:hover {
+
+  transform:translateY(-10px);
+
+
+  box-shadow:
+
+  0 25px 45px rgba(0,0,0,.15);
+
+}
+
+
+
+
+
+/* Replace emoji style */
+
+.office-icon {
+
+  width:70px;
+
+  height:70px;
+
+  margin:0 auto 25px;
+
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+
+  border-radius:50%;
+
+
+  background:#eff6ff;
+
+
+  color:#2563eb;
+
+
+  font-size:32px;
+
+}
+
+
+
+
+
+.office-card h3 {
+
+  font-size:25px;
+
+  color:#111827;
+
+  margin-bottom:10px;
+
+}
+
+
+
+.office-card p {
+
+  color:#64748b;
+
+  line-height:1.6;
+
+  margin:8px 0;
+
+}
+
+
+
+
+
+
+/* ================= ANIMATION ================= */
+
+
+.office-card {
+
+  animation:fadeUp .7s ease;
+
+}
+
+
+
+@keyframes fadeUp {
+
+
+from {
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+
+to {
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:1000px){
+
+
+.offices-grid {
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.offices-grid {
+
+grid-template-columns:1fr;
+
+}
+
+
+.offices-section {
+
+padding:40px 20px;
+
+}
+
+
+.offices-hero h1 {
+
+font-size:40px;
+
+}
+
+
+}

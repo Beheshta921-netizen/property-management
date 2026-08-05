@@ -1,0 +1,43 @@
+html{
+    scroll-behavior:smooth;
+}
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    font-family:Inter, sans-serif;
+    background:
+    linear-gradient(
+        180deg,
+        #f8fbff,
+        #ffffff
+    );
+}
+button{
+    transition:0.35s;
+}
+button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(37,99,235,.25);
+}
+.fade-up{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+html{
+    scroll-behavior:smooth;
+}

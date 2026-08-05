@@ -1,0 +1,153 @@
+.platform-page {
+
+  font-family:Arial,sans-serif;
+
+  color:#1f2937;
+
+}
+
+
+
+/* HERO */
+
+
+.platform-hero {
+
+  background:
+
+  linear-gradient(
+    135deg,
+    #111827,
+    #2563eb
+  );
+
+
+  color:white;
+
+  text-align:center;
+
+  padding:110px 20px;
+
+}
+
+
+.platform-hero h1 {
+
+  font-size:55px;
+
+  margin-bottom:20px;
+
+}
+
+
+.platform-hero p {
+
+  max-width:750px;
+
+  margin:auto;
+
+  font-size:20px;
+
+  line-height:1.7;
+
+  color:#dbeafe;
+
+}
+
+
+
+
+
+/* FEATURES */
+
+
+.platform-features {
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:30px;
+
+  padding:80px;
+
+  background:#f8fafc;
+
+}
+
+
+
+
+
+.feature-card {
+
+  background:white;
+
+  padding:35px;
+
+  border-radius:20px;
+
+
+  box-shadow:
+
+  0 10px 30px rgba(0,0,0,.08);
+
+
+  transition:.35s;
+
+}
+
+
+
+.feature-card:hover {
+
+  transform:translateY(-10px);
+
+
+  box-shadow:
+
+  0 20px 40px rgba(0,0,0,.15);
+
+}
+
+
+
+
+.feature-card h3 {
+
+  color:#111827;
+
+  font-size:26px;
+
+}
+
+
+.feature-card p {
+
+  color:#64748b;
+
+  line-height:1.7;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+.platform-features{
+
+grid-template-columns:1fr;
+
+padding:40px 20px;
+
+}
+
+
+.platform-hero h1{
+
+font-size:40px;
+
+}
+
+}

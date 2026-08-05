@@ -1,0 +1,379 @@
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar {
+    width: 92%;
+    max-width: 1400px;
+    height: 78px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #fff;
+    border-radius: 45px;
+
+    padding: 0 30px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .08);
+
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 999;
+}
+
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 30px;
+}
+
+.logo span {
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #111827;
+}
+
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.arrow {
+    font-size: 11px;
+}
+
+
+/* ==========================
+   RIGHT SIDE BUTTONS
+========================== */
+
+.nav-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-left: 20px;
+}
+
+
+/* ==========================
+   REQUEST A DEMO
+========================== */
+
+.demo-nav-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 20px;
+
+    border: 1px solid #d0d5dd;
+
+    border-radius: 40px;
+
+    background: #ffffff;
+
+    color: #344054;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: all .3s ease;
+}
+
+.demo-nav-button:hover {
+    color: #2563eb;
+
+    border-color: #2563eb;
+
+    background: #f8fbff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, .10);
+}
+
+
+/* ==========================
+   GET STARTED BUTTON
+========================== */
+
+.nav-btn {
+    background: #111;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 30px;
+
+    border-radius: 40px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.nav-btn:hover {
+    background: #2563eb;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, .20);
+}
+
+
+/* ==========================
+   DROPDOWN
+========================== */
+
+.platform-menu {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    height: 78px;
+}
+
+
+/* Shared dropdown wrapper */
+
+.dropdown-panel {
+    position: absolute;
+
+    top: 100%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding-top: 18px;
+
+    z-index: 1000;
+}
+
+
+/* ==========================
+   PRICING DROPDOWN
+========================== */
+
+.pricing-wrapper {
+    position: relative;
+}
+
+.pricing-panel {
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    padding-top: 15px;
+}
+
+.pricing-dropdown {
+    position: absolute;
+
+    top: 45px;
+
+    left: 0;
+
+    z-index: 9999;
+}
+
+
+/* ==========================
+   DROPDOWN HOVER AREA
+========================== */
+
+.platform-menu::after {
+    content: "";
+
+    position: absolute;
+
+    height: 20px;
+
+    width: 100%;
+
+    bottom: -20px;
+
+    left: 0;
+}
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 1150px) {
+
+    .navbar {
+        width: 94%;
+
+        padding: 0 22px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .demo-nav-button {
+        padding: 11px 16px;
+
+        font-size: 13px;
+    }
+
+    .nav-btn {
+        padding: 12px 20px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        width: 94%;
+
+        height: 70px;
+
+        padding: 0 18px;
+    }
+
+    .logo span {
+        font-size: 24px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-actions {
+        margin-left: auto;
+
+        gap: 8px;
+    }
+
+    .demo-nav-button {
+        padding: 9px 14px;
+
+        font-size: 12px;
+    }
+
+    .nav-btn {
+        padding: 10px 16px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width: 550px) {
+
+    .navbar {
+        width: 92%;
+
+        height: 65px;
+
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo span {
+        font-size: 20px;
+    }
+
+    .demo-nav-button {
+        display: none;
+    }
+
+    .nav-btn {
+        padding: 9px 16px;
+
+        font-size: 12px;
+    }
+
+}

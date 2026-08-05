@@ -1,0 +1,138 @@
+.resources-menu {
+    width: 900px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 280px;
+    gap: 30px;
+    box-shadow: 0 15px 45px rgba(0,0,0,.12);
+    align-items: start;
+}
+
+/* Columns */
+
+.resources-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.resource-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Resource Card */
+
+.resource-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 16px;
+    border-radius: 14px;
+    transition: all .25s ease;
+}
+
+.resource-card:hover {
+    background: #f5f9ff;
+    transform: translateX(6px);
+}
+
+.resource-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    background: #edf4ff;
+    color: #2563eb;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.resource-card h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #111827;
+}
+
+.resource-card p {
+    margin-top: 6px;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Preview */
+
+.resources-preview {
+    background: linear-gradient(180deg,#f8fbff,#eef5ff);
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.resource-placeholder {
+    width: 100%;
+    height: 130px;
+    border-radius: 14px;
+    background: #dbeafe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    color: #2563eb;
+    margin-bottom: 18px;
+}
+
+.resources-preview h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #111827;
+}
+
+.resources-preview p {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.resources-btn {
+    margin-top: 22px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 13px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .25s;
+}
+
+.resources-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+
+    .resources-menu {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .resources-preview {
+        margin-top: 10px;
+    }
+
+}

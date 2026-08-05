@@ -1,0 +1,1024 @@
+.cloud-page{
+
+    padding-top:130px;
+
+    background:#f8fbff;
+
+}
+
+
+/* ================= HERO ================= */
+
+
+.cloud-hero{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:70px 0 100px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+
+
+.cloud-badge{
+
+    display:inline-block;
+
+    background:#eaf2ff;
+
+    color:#2563eb;
+
+    padding:10px 24px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+.cloud-left h1{
+
+    font-size:58px;
+
+    line-height:1.15;
+
+    color:#111827;
+
+}
+
+
+
+.cloud-left p{
+
+    margin:30px 0;
+
+    max-width:600px;
+
+    color:#6b7280;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+.cloud-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:45px;
+
+}
+
+
+
+.primary-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:16px 34px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+
+
+.secondary-btn{
+
+    background:white;
+
+    color:#2563eb;
+
+    border:2px solid #2563eb;
+
+    padding:16px 34px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+
+
+.cloud-stats{
+
+    display:flex;
+
+    gap:40px;
+
+}
+
+
+
+.cloud-stat h3{
+
+    color:#2563eb;
+
+    font-size:32px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.cloud-stat p{
+
+    margin:0;
+
+    font-size:15px;
+
+}
+
+
+
+
+/* ================= CLOUD DASHBOARD ================= */
+
+
+
+.cloud-right{
+
+    position:relative;
+
+}
+
+
+
+.cloud-dashboard{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+}
+
+
+
+.cloud-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.cloud-header span{
+
+    color:#10b981;
+
+    font-weight:600;
+
+}
+
+
+
+.cloud-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:20px;
+
+    background:#f8fbff;
+
+    border-radius:18px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.cloud-icon{
+
+    width:55px;
+
+    height:55px;
+
+    background:#dbeafe;
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:25px;
+
+}
+
+
+
+.cloud-card p{
+
+    color:#6b7280;
+
+    margin-top:5px;
+
+}
+
+
+
+.server-status{
+
+    background:#eef5ff;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    margin-top:25px;
+
+}
+
+
+
+.health-bar{
+
+    height:10px;
+
+    background:#dbeafe;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin:15px 0;
+
+}
+
+
+
+.health-bar span{
+
+    display:block;
+
+    height:100%;
+
+    width:98%;
+
+    background:#2563eb;
+
+}
+
+
+
+.server-status p{
+
+    color:#6b7280;
+
+}
+
+
+
+.cloud-floating{
+
+    position:absolute;
+
+    background:white;
+
+    padding:16px 25px;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    font-weight:600;
+
+}
+
+
+
+.top-cloud{
+
+    top:70px;
+
+    left:-35px;
+
+}
+
+
+
+.bottom-cloud{
+
+    bottom:70px;
+
+    right:-35px;
+
+}
+
+
+
+
+
+/* ================= FEATURES ================= */
+
+
+
+.cloud-features{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:100px auto;
+
+}
+
+
+
+.cloud-section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+
+
+.cloud-section-title span{
+
+    color:#2563eb;
+
+    font-weight:600;
+
+}
+
+
+
+.cloud-section-title h2{
+
+    font-size:46px;
+
+    color:#111827;
+
+    margin:20px 0;
+
+}
+
+
+
+.cloud-section-title p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#6b7280;
+
+    line-height:1.8;
+
+}
+
+
+
+.cloud-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+.cloud-feature-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:22px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+
+
+.cloud-feature-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.cloud-feature-icon{
+
+    width:70px;
+
+    height:70px;
+
+    background:#eef5ff;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.cloud-feature-card h3{
+
+    margin-bottom:15px;
+
+}
+
+
+
+.cloud-feature-card p{
+
+    color:#6b7280;
+
+    line-height:1.8;
+
+}
+/* ================= CLOUD ARCHITECTURE ================= */
+
+
+.cloud-architecture{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:120px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+
+
+.architecture-left h2{
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    color:#111827;
+
+    margin:25px 0;
+
+}
+
+
+
+.architecture-left p{
+
+    color:#6b7280;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.architecture-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+.architecture-item{
+
+    display:flex;
+
+    gap:18px;
+
+    background:white;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
+
+}
+
+
+
+.architecture-icon{
+
+    width:45px;
+
+    height:45px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:bold;
+
+}
+
+
+
+.architecture-item p{
+
+    margin:8px 0 0;
+
+    font-size:15px;
+
+}
+
+
+
+
+/* ================= ARCHITECTURE DIAGRAM ================= */
+
+
+
+.architecture-right{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.architecture-box{
+
+    background:white;
+
+    padding:40px;
+
+    width:420px;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+    text-align:center;
+
+}
+
+
+
+.architecture-node{
+
+    background:#eef5ff;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    color:#2563eb;
+
+}
+
+
+
+.architecture-node h4{
+
+    margin-top:10px;
+
+    color:#111827;
+
+}
+
+
+
+.main-node{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+
+
+.main-node h4{
+
+    color:white;
+
+}
+
+
+
+.architecture-line{
+
+    font-size:30px;
+
+    color:#2563eb;
+
+    margin:12px 0;
+
+}
+
+
+
+.architecture-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+}
+
+
+
+.small-node{
+
+    padding:18px;
+
+}
+
+
+
+.backup-node{
+
+    background:#ecfdf5;
+
+    color:#10b981;
+
+}
+
+
+
+
+
+/* ================= PERFORMANCE ================= */
+
+
+
+.cloud-performance{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:120px auto;
+
+}
+
+
+
+.performance-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.performance-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+
+
+.performance-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.performance-card h2{
+
+    font-size:42px;
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.performance-card h4{
+
+    margin-bottom:12px;
+
+}
+
+
+
+.performance-card p{
+
+    color:#6b7280;
+
+    line-height:1.7;
+
+}
+
+
+
+
+
+/* ================= CTA ================= */
+
+
+
+.cloud-cta{
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:100px 20px;
+
+}
+
+
+
+.cloud-cta h2{
+
+    font-size:48px;
+
+    line-height:1.2;
+
+}
+
+
+
+.cloud-cta p{
+
+    max-width:700px;
+
+    margin:25px auto 40px;
+
+    line-height:1.8;
+
+    opacity:.9;
+
+}
+
+
+
+.cloud-cta button{
+
+    background:white;
+
+    color:#2563eb;
+
+    border:none;
+
+    padding:16px 40px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+/* ================= RESPONSIVE ================= */
+
+
+
+@media(max-width:1100px){
+
+
+    .cloud-hero,
+    .cloud-architecture{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+
+
+    .cloud-left p{
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+
+
+    .cloud-buttons,
+    .cloud-stats{
+
+        justify-content:center;
+
+    }
+
+
+
+    .cloud-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+
+    .performance-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+
+    .cloud-floating{
+
+        display:none;
+
+    }
+
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+    .cloud-left h1{
+
+        font-size:40px;
+
+    }
+
+
+
+    .cloud-section-title h2,
+    .architecture-left h2,
+    .cloud-cta h2{
+
+        font-size:34px;
+
+    }
+
+
+
+    .cloud-grid,
+    .performance-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .cloud-buttons{
+
+        flex-direction:column;
+
+    }
+
+
+
+    .primary-btn,
+    .secondary-btn{
+
+        width:100%;
+
+    }
+
+
+
+    .cloud-stats{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+
+
+    .architecture-box{
+
+        width:100%;
+
+        padding:25px;
+
+    }
+
+
+
+    .architecture-row{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}

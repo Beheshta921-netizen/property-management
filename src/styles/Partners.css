@@ -1,0 +1,358 @@
+.partners-page {
+  font-family: Arial, sans-serif;
+}
+
+
+.about-hero,
+.partners-hero,
+.offices-hero,
+.careers-hero,
+.news-hero {
+
+
+background:
+linear-gradient(
+135deg,
+#0f172a,
+#2563eb
+);
+
+
+color:white;
+
+padding:120px 20px;
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+
+
+}
+
+.partners-hero h1 {
+
+  font-size:50px;
+
+}
+
+
+.partners-hero p {
+
+  font-size:20px;
+
+  max-width:700px;
+
+  margin:auto;
+
+}
+
+
+
+/* Partner Cards */
+
+
+.partners-section {
+
+  padding:70px;
+
+  background:#f8fafc;
+
+}
+
+
+.partners-section h2 {
+
+  text-align:center;
+
+  font-size:36px;
+
+}
+
+
+
+.partners-grid {
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(4,1fr);
+
+  gap:25px;
+
+  margin-top:40px;
+
+}
+
+
+
+.partner-card {
+
+  background:white;
+
+  padding:35px;
+
+  text-align:center;
+
+  border-radius:18px;
+
+  box-shadow:
+  0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+
+.partner-logo {
+
+  font-size:50px;
+
+}
+
+
+
+.partner-card h3 {
+
+  color:#2563eb;
+
+}
+
+
+
+/* Benefits */
+
+
+.partner-benefits {
+
+  padding:70px;
+
+  text-align:center;
+
+}
+
+
+
+.benefits-grid {
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:30px;
+
+  margin-top:40px;
+
+}
+
+
+
+.benefits-grid div {
+
+  background:#f1f5f9;
+
+  padding:30px;
+
+  border-radius:15px;
+
+}
+
+
+
+/* CTA */
+
+
+.partner-cta {
+
+  background:#2563eb;
+
+  color:white;
+
+  padding:70px;
+
+  text-align:center;
+
+}
+
+
+
+.partner-cta button {
+
+  margin-top:25px;
+
+  padding:15px 35px;
+
+  border:none;
+
+  border-radius:30px;
+
+  cursor:pointer;
+
+}
+
+
+
+@media(max-width:900px){
+
+.partners-grid,
+.benefits-grid {
+
+grid-template-columns:1fr;
+
+}
+
+}/* Professional Animations */
+
+@keyframes fadeUp {
+
+  from {
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+
+@keyframes lineGrow {
+
+  from {
+    width:0;
+  }
+
+  to {
+    width:80px;
+  }
+
+}
+
+
+/* Section animation */
+
+section {
+
+  animation: fadeUp 0.8s ease;
+
+}
+
+
+/* Professional heading line */
+
+h2 {
+
+  position:relative;
+
+  display:inline-block;
+
+}
+
+
+h2::after {
+
+  content:"";
+
+  position:absolute;
+
+  height:4px;
+
+  width:80px;
+
+  background:#dbeafe;
+
+  bottom:-12px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  border-radius:10px;
+
+  animation:lineGrow .8s ease;
+
+}
+
+
+
+/* Cards animation */
+
+
+.about-card,
+.partner-card,
+.team-card,
+.job-card,
+.news-card,
+.office-card {
+
+
+  transition:all .35s ease;
+
+
+}
+
+
+.about-card:hover,
+.partner-card:hover,
+.team-card:hover,
+.job-card:hover,
+.news-card:hover,
+.office-card:hover {
+
+
+  transform:translateY(-10px);
+
+
+  box-shadow:
+  0 20px 40px rgba(0,0,0,.15);
+
+
+}.about-hero::before,
+.partners-hero::before,
+.offices-hero::before,
+.careers-hero::before,
+.news-hero::before {
+
+
+content:"";
+
+position:absolute;
+
+width:400px;
+
+height:400px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:50%;
+
+top:-150px;
+
+right:-100px;
+
+animation:float 6s infinite alternate;
+
+
+}
+
+
+
+@keyframes float {
+
+from{
+
+transform:translateY(0);
+
+}
+
+
+to{
+
+transform:translateY(40px);
+
+}
+
+}
